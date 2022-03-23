@@ -15,12 +15,18 @@ steps:
     projects: 'MauiApp1\MauiApp1.sln'
     arguments: '-c Release -f net6.0-android'
 
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    configuration: 'Release'
+    msbuildArguments: '/p:TargetFramework=net6.0-windows10.0.19041'
+
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(agent.builddirectory)'
-    Contents: '**/*-Signed.aab'
+    #Contents: '**/*-Signed.aab'
     TargetFolder: '$(build.artifactstagingdirectory)'
-    flattenFolders: true
+    #flattenFolders: true
 
 - task: PublishBuildArtifacts@1
   inputs:
