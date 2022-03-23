@@ -18,7 +18,7 @@
 		<ApplicationId Condition="$(TargetFramework.Contains('-windows'))">98132AA5-2EC0-40B2-B530-EFCCF2D1824E</ApplicationId>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- Required for C# Hot Reload -->
